@@ -15,7 +15,7 @@ import './index.css';
 //import NameForm from './FormDemo';
 //import ReservationForm from './FormDemoMultiple';
 //import AppTD from './AppTD';
-import AppRecipe from './AppRecipe';
+import App from './App';
 
 function Clock(props) {
     return (
@@ -49,4 +49,4 @@ function Clock(props) {
 //ReactDOM.render(<NameForm />, document.getElementById('root9'));
 //ReactDOM.render(<ReservationForm />, document.getElementById('root10'));
 //ReactDOM.render(<AppTD />, document.getElementById('root11'));
-ReactDOM.render(<AppRecipe />, document.getElementById('root12'));
+ReactDOM.render(<App />, document.getElementById('root12'));
