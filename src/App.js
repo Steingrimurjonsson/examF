@@ -1,6 +1,8 @@
-import { BrowserRouter as Router, Route, NavLink, Switch, useRouteMatch, useParams, Link, Redirect, browserHistory } from "react-router-dom"
-import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, NavLink} from "react-router-dom"
+import React, { Component } from 'react';
 import LogInAsAdmin from "./LoginApp";
+import facadeRec from "./RecFacade";
+
 
 
 export default function App() {
@@ -26,6 +28,43 @@ const Header = () => {
       
   );
 }
+class RecData extends Component { // MAKE COUNTRY VALUE LOWER CASE 
+    constructor(props) {
+        super(props);
+        this.state = {
+          data: {},
+        };
+      }
+    componentDidMount() {
+        fetch("http://localhost:8080/ExamB/api/recipes/getrecipe")
+          .then(response => response.json())
+         .then(data => this.setState({data: data}))
+    };
+    render() {
+  
+        //var mySubString = JSON.stringify(([this.state]));
+        let test = this.state.data;
+      //console.log(test);
+      for(let i = 0; i < test.length; i++){
+
+        let childArray = test[i].child;
+     
+        for(let j = 0; j < childArray.length; j++){
+     
+       console.log(childArray[j]);
+     
+        }
+     
+     }
+  
+      return (
+        <div>
+     
+        </div>
+      );
+    }
+  }
+
 const Content = () => {
   return (
     <div>
@@ -47,6 +86,7 @@ function Home() {
         <div>
           <div>
             <h2>Welcome to recipe list</h2>
+            <RecData /> 
             </div>
         </div>
       
