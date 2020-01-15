@@ -44,18 +44,8 @@ class RecData extends Component { // MAKE COUNTRY VALUE LOWER CASE
   
         //var mySubString = JSON.stringify(([this.state]));
         let test = this.state.data;
-      //console.log(test);
-      for(let i = 0; i < test.length; i++){
+      console.log(test);
 
-        let childArray = test[i].child;
-     
-        for(let j = 0; j < childArray.length; j++){
-     
-       console.log(childArray[j]);
-     
-        }
-     
-     }
   
       return (
         <div>
