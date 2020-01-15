@@ -41,15 +41,14 @@ class RecData extends Component { // MAKE COUNTRY VALUE LOWER CASE
          .then(data => this.setState({data: data}))
     };
     render() {
-  
-        //var mySubString = JSON.stringify(([this.state]));
+        var mySubString = JSON.stringify((this.state.data));
         let test = this.state.data;
-      console.log(test);
+      console.log(mySubString);
 
   
       return (
         <div>
-     
+    <p>{mySubString}</p>
         </div>
       );
     }
